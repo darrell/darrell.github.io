@@ -1,6 +1,6 @@
 require 'rubygems'
 require "bundler/setup" 
-$:<<'lib'
+$:<<File.dirname(__FILE__)+'/../lib'
 require 'sequel'
 require 'scraper/team_log'
 require 'nwsl'

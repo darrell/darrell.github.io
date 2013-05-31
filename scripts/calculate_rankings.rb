@@ -1,8 +1,7 @@
 require 'rubygems'
 require "bundler/setup" 
-$:<<'lib'
+$:<<File.dirname(__FILE__)+'/../lib'
 require 'sequel'
-require 'scraper/team_log'
 require 'nwsl'
 require 'pry'
 require 'csv'
@@ -35,10 +34,8 @@ Game.where(:played => true).sort_by{|g| g.game_day}.each do |g|
   home_rank.update
   away_rank.update
 end
-puts teams.map(&:inspect)
 
-teams.each do |t|
-  next if t.nil?
-  puts "#{t.name}: #{t.ranking.rating}"
+teams.compact.sort_by{|t| t.ranking.rating}.each do |t|
+  puts "#{t.name}:\t#{t.ranking.rating.round}\t#{t.ranking.deviation.round}\t#{t.ranking.volatility.round(6)}"
 end
   
