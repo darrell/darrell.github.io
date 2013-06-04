@@ -70,8 +70,8 @@ write.csv(played_predictions$scores, row.names=FALSE, file="/Users/darrell/nwsl/
 
 
 # MLS
-# scores=read.csv('nwsl/mls.csv', na = NaN,colClasses=c("character","character","integer","integer","Date"))
-# teams=read.csv('nwsl/mls_teams.csv')
+# scores=read.csv('mls.csv', na = NaN,colClasses=c("character","character","integer","integer","Date"))
+# teams=read.csv('mls_teams.csv')
 # 
 # 
 # 
