@@ -1,0 +1,7 @@
+*.log
+vendor/
+bin/
+_site
+.bundle
+tmp
+*.tmpproj

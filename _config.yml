@@ -1,0 +1,6 @@
+name: National Womens Soccer League Stats
+pygments: true
+exclude: [vendor, lib, scripts, tmp, bin, Gemfile*, NWSL.tmproj ]
+
+maruku:
+  use_divs:   true
