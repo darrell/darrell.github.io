@@ -26,3 +26,5 @@
 2013-05-25|Boston Breakers|Washington Spirit|3|0|Boston Breakers|f
 2013-05-25|FC Kansas City|Sky Blue FC|0|1|Sky Blue FC|f
 2013-05-25|Seattle Reign|Portland Thorns|0|1|Portland Thorns|f
+2013-06-01|Portland Thorns|Chicago Red Stars|0|2|Chicago Red Stars|f
+2013-06-01|Sky Blue FC|Boston Breakers|5|1|Sky Blue FC|f

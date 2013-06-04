@@ -5,7 +5,7 @@ class Team < Sequel::Model
   one_to_many :home_games, :class => :Game, :key => :home_team_id
   one_to_many :away_games, :class => :Game, :key => :away_team_id
 
-  attr_accessor :ranking
+  attr_accessor :rating
 
   def initialize()
     @ranking = Glicko2.new()

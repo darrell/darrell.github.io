@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby -w
+# encoding: utf-8
 
 #
 #
@@ -52,6 +53,8 @@ class Glicko2
   LOSS = 0.0
   DRAW = 0.5
 
+  TIE_FACTOR=0.001 # corresponds to 20% tie games, the June 3,2013 NWSL average.
+
   # system constant, determines delta volatility over time; should be [0.3,1.2]
   DVOL = 0.3
 
@@ -72,10 +75,61 @@ class Glicko2
     p_win(other) <=> 0.5
   end
 
+  
   # get the probability of beating opponent
-  def p_win(opponent)
-    1.0 / (1.0 + 10.0**(((opponent.rating - self.rating) / (400.0 * Math.sqrt(1.0 + 0.0000100723986 * (self.deviation**2.0 + opponent.deviation**2.0))))))
+  def glicko_p_win(opponent, home_advantage=false)
+    rating_diff=opponent.rating - (self.rating + ( home_advantage ?  85 : 0) )
+    1.0 / (1.0 + 10.0**(((rating_diff) / (400.0 * Math.sqrt(1.0 + 0.0000100723986 * (self.deviation**2.0 + opponent.deviation**2.0))))))
   end
+
+  # we replace the standard glicko2 probability calculation
+  # with one that can handle ties (Davidson, 1970). This is a bit
+  # sloppy, since we toss out one of the things that makes Glicko nice - the deviation
+  # but, since Glickman hasn't published a version that trly accounts for ties
+  # we have to live with it.
+
+  def p_win(oppo,home_advantage=false)
+    p(oppo)[:win]
+  end
+  def p_lose(oppo,home_advantage=false)
+    p(oppo)[:lose]
+  end
+  def p_tie(oppo,home_advantage=false)
+    p(oppo)[:tie]
+  end
+
+  def p(opponent,home_advantage=false)
+    i=self.rating
+    j=opponent.rating
+    bonus =  home_advantage ? 85 : 0
+    {:win => _p_win(i,j,bonus).round(3),
+     :tie => _p_tie(i,j,bonus).round(3),
+     :lose => _p_lose(i,j,bonus).round(3)
+     }
+  end
+  
+  # probability that π_i defeats π_j?
+  def _p_win(π_i,π_j,home_bonus=0)
+    π_i=π_i.to_f+home_bonus
+    π_j=π_j.to_f
+    factor=TIE_FACTOR*(Math.sqrt(π_j*π_i))
+    π_i/(π_i+π_j+factor)
+  end
+
+  def _p_tie(π_i,π_j,home_bonus=0)
+    π_i=π_i.to_f+home_bonus
+    π_j=π_j.to_f
+    factor=TIE_FACTOR*(Math.sqrt(π_j*π_i))
+    factor/(π_i+π_j+factor)
+  end
+
+  def _p_lose(π_i,π_j,home_bonus=0)
+    π_i=π_i+home_bonus
+    π_j=π_j.to_f
+    factor=TIE_FACTOR*(Math.sqrt(π_j*π_i))
+    π_j/(π_i+π_j+factor)
+  end
+  
 
   # Get the current rating.  This rating is a Glicko rating, not a Glicko2 rating.
   # For details, please see http://www.glicko.com/

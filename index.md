@@ -2,26 +2,15 @@
 layout: page
 title: NWSL Statistics
 ---
-<style>
-table {
-  border-collapse:collapse;
-}
-table, th, td {
-border: 1px solid black;
-font-size: 90%;
-padding: 5px;
-}
-</style>
-## Scoreboard
-[As CSV](scoreboard.csv)
 
-game_day|home team|away team|home score|away score|winner|draw
---------|---------|---------|:--------:|:--------:|------|----
-{% include scoreboard.md %}
+## [Scoreboard](/tables/scoreboard.html)
+[As CSV](/tables/scoreboard.csv)
 
-## Current Overall Record
-[As CSV](team_record.csv)
+## [Current Overall Record](/tables/team_record.html)
+[As CSV](/tables/team_record.csv)
 
-team|win|lose|draw|games played|pts
-----|:-:|:--:|:--:|:----------:|:-:
-{% include team_record.md %}
+## [Predicted Results of Unplayed Games](/tables/predicted_results_games_unplayed.html)
+[As CSV](/tables/predicted_results_games_unplayed.csv)
+
+## [Predicted Results of Played Games](/tables/predicted_results_games_played.html)
+[As CSV](/tables/predicted_results_games_played.csv)
