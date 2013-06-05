@@ -1,6 +1,6 @@
 ---
 layout: page
-title: NWSL Team Records
+title: Predicted Results of Played Games
 ---
 
 ## [Predicted Results of Played Games](/tables/predicted_results_games_played.html)
@@ -9,6 +9,6 @@ title: NWSL Team Records
 
 
 
-date|home team|away team|pred home score|pred away score|home residuals|away residuals|home attack|home win|away win|tie|home shutout|away shutout
-----|---------|---------|:-------------:|:-------------:|:------------:|:------------:|:---------:|:------:|:------:|:-:|:----------:|:----------:
+date|home team|away team|home attack|home defend|away attack|away defend|pred home score|pred away score|home win prob|away win prob|tie prob|home shutout prob|away shutout prob
+:--:|:-------:|:-------:|:---------:|:---------:|:---------:|:---------:|:-------------:|:-------------:|:-----------:|:-----------:|:------:|:---------------:|:---------------:
 {% include predicted_results_games_played.md %}
