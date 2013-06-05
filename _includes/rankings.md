@@ -1,8 +1,8 @@
-Sky Blue FC|1.2|1.35|1.7|9
-FC Kansas City|0.34|0.85|1.49|6
-Portland Thorns|0.19|0.89|1.28|9
-Western NY Flash|0.17|1.17|0.97|6
-Boston Breakers|-0.17|1.36|0.65|7
-Washington Spirit|-0.76|0.89|0.66|8
-Chicago Red Stars|-1.05|0.77|0.62|7
-Seattle Reign|-1.88|0.54|0.51|8
+Sky Blue FC|2.44|2.08|2.62|9
+FC Kansas City|1.58|1.3|2.3|6
+Portland Thorns|1.43|1.37|1.97|9
+Western NY Flash|1.41|1.8|1.48|6
+Boston Breakers|1.07|2.09|1|7
+Washington Spirit|0.48|1.37|1.02|8
+Chicago Red Stars|0.19|1.19|0.96|7
+Seattle Reign|-0.64|0.82|0.78|8
