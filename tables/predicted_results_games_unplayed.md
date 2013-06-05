@@ -9,6 +9,6 @@ title: Predicted Results of Unplayed Games
 
 
 
-date|home team|away team|home attack|home defend|away attack|away defend|pred home score|pred away score|home win prob|away win prob|tie prob|home shutout prob|away shutout prob
-:--:|:-------:|:-------:|:---------:|:---------:|:---------:|:---------:|:-------------:|:-------------:|:-----------:|:-----------:|:------:|:---------------:|:---------------:
+date|home team|away team|pred home score|pred away score|home win prob|away win prob|tie prob|home shutout prob|away shutout prob|home attack|home defend|away attack|away defend
+:--:|:-------:|:-------:|:-------------:|:-------------:|:-----------:|:-----------:|:------:|:---------------:|:---------------:|:---------:|:---------:|:---------:|:---------:
 {% include predicted_results_games_unplayed.md %}

@@ -65,15 +65,27 @@ write.csv(x$ranks, file="/Users/darrell/nwsl/tables/rankings.csv",na="")
 
 # predictions
 # only want some columns
-pred_cols=c("date",
-            "home.team","away.team", 
-            "home.attack", "home.defend",
-            "away.attack", "away.defend",
+played_pred_cols=c("date",
+            "home.team","away.team",
+            "home.score","away.score",
             "pred.home.score","pred.away.score",
-            "home.win","away.win","tie", "home.shutout","away.shutout")
+            "home.win","away.win","tie", 
+            "home.shutout","away.shutout",
+            "home.attack", "home.defend",
+            "away.attack", "away.defend"
+            )
+
+unplayed_pred_cols=c("date",
+            "home.team","away.team", 
+            "pred.home.score","pred.away.score",
+            "home.win","away.win","tie", 
+            "home.shutout","away.shutout",
+            "home.attack", "home.defend",
+            "away.attack", "away.defend"
+            )
 
 # unplayed games predictions
-write.table(unplayed_predictions$scores[,pred_cols], 
+write.table(unplayed_predictions$scores[,unplayed_pred_cols], 
             file="/Users/darrell/nwsl/_includes/predicted_results_games_unplayed.md", 
             sep = "|", quote=FALSE, row.names=FALSE, col.names=FALSE, na=" ")
 write.csv(unplayed_predictions$scores, 
@@ -81,7 +93,7 @@ write.csv(unplayed_predictions$scores,
           row.names=FALSE, na="")
 
 # played games predictions
-write.table(played_predictions$scores[,pred_cols], 
+write.table(played_predictions$scores[,played_pred_cols], 
             file="/Users/darrell/nwsl/_includes/predicted_results_games_played.md", 
             sep = "|", quote=FALSE, row.names=FALSE, col.names=FALSE, na=" ")
 write.csv(played_predictions$scores, 
