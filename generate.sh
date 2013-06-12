@@ -8,4 +8,4 @@ psql -c "\copy (SELECT name,wins,losses,draws,games_played,points_earned from te
 psql -c "\copy (select * from team_record) to 'tables/team_record.csv' csv header"
 
 
-R CMD BATCH rankings.r || cat rankings.r.Rout
+R CMD BATCH scripts/rankings.r || cat rankings.r.Rout

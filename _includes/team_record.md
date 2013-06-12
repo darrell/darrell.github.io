@@ -1,8 +1,8 @@
-Sky Blue FC|7|1|1|9|22
-Portland Thorns|6|2|1|9|19
-Boston Breakers|3|2|2|7|11
-FC Kansas City|3|2|1|6|10
-Western NY Flash|3|2|1|6|10
+Sky Blue FC|7|2|1|10|22
+Portland Thorns|7|2|1|10|22
+Western NY Flash|4|2|2|8|14
+FC Kansas City|4|3|1|8|13
+Boston Breakers|3|3|3|9|12
+Chicago Red Stars|2|4|2|8|8
 Washington Spirit|1|4|3|8|6
-Chicago Red Stars|1|4|2|7|5
-Seattle Reign|0|7|1|8|1
+Seattle Reign|0|8|1|9|1

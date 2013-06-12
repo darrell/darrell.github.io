@@ -11,7 +11,7 @@ require 'logger'
 DB.loggers << ::Logger.new('load_games.log')
 
 
-CSV.readlines('games2', :col_sep=>"\t").each do |row|
+CSV.readlines('tmp/games2', :col_sep=>"\t").each do |row|
   row.map!(&:strip)
   match_date=Date.parse(row[0])
   home=Team.find(:name => row[2])

@@ -28,3 +28,8 @@
 2013-05-25|Seattle Reign|Portland Thorns|0|1|Portland Thorns|f
 2013-06-01|Portland Thorns|Chicago Red Stars|0|2|Chicago Red Stars|f
 2013-06-01|Sky Blue FC|Boston Breakers|5|1|Sky Blue FC|f
+2013-06-05|Boston Breakers|Western NY Flash|2|2| |t
+2013-06-06|Portland Thorns|FC Kansas City|4|3|Portland Thorns|f
+2013-06-08|Sky Blue FC|Western NY Flash|0|3|Western NY Flash|f
+2013-06-09|Chicago Red Stars|Boston Breakers|1|0|Chicago Red Stars|f
+2013-06-09|Seattle Reign|FC Kansas City|0|1|FC Kansas City|f
