@@ -3,7 +3,15 @@
   <head>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    
+    <script>
+      window.onload = choosePic;
+      var myPix = new Array("jk_sad.gif","juergen_klinsmann.jpg");
+
+      function choosePic() {
+        var randomNum = Math.floor(Math.random() * myPix.length);
+        document.getElementById("jk_image").src = myPix[randomNum];
+      }
+    </script>
     <title>Is Nagbe a Citizen Yet?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8"/>
@@ -45,7 +53,7 @@
       </div>
       <div class="row image">
         <div class="col-md-12 ">
-          <img class="img-responsive center-block" src="jk_sad.gif" alt="Sad Juergen Klinnsman"><br>
+          <img id="jk_image" class="img-responsive center-block" alt="Sad Juergen Klinnsman"><br/>
           <a href="https://www.youtube.com/watch?v=SpwTWSaERUI">
             <span class="link"> console yourself here</span>
           </a>
